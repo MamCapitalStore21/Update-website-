@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About WhatsApp Bots</title>
+    <style>
+        body {
+            background-color: #000; /* Latar belakang hitam */
+            color: #00ffff; /* Warna teks biru cyber */
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        header p {
+            font-size: 24px;
+        }
+
+        .content {
+            margin: 50px 20px;
+            padding: 20px;
+            background-color: #111;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #00ffff;
+            animation: fadeIn 1.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .bot-image {
+            width: 200px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #00ffff;
+            animation: slideInLeft 1s ease-in-out;
+        }
+
+        .next-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #00ffff;
+            background-color: #222;
+            border: 2px solid #00ffff;
+            border-radius: 10px;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px #000000;
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff inset;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            animation: slideInUp 1s ease-in-out;
+        }
+
+        .next-btn:hover {
+            background-color: #00ffff;
+            color: #000;
+            box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff inset;
+        }
+
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader::before {
+            content: '';
+            width: 50px;
+            height: 50px;
+            border: 5px solid #00ffff;
+            border-top: 5px solid #000;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader" id="loader"></div>
+
+    <header>
+        <h1>What is a WhatsApp Bot?</h1>
+        <p>Learn more about how a WhatsApp bot can help your business.</p>
+    </header>
+
+    <section class="content">
+        <img src="bot-character.png" alt="Bot Character" class="bot-image">
+        <div>
+            <h2>Introduction to WhatsApp Bots</h2>
+            <p>WhatsApp bots are automated software designed to communicate with your customers directly on WhatsApp. They can handle tasks such as answering frequently asked questions, processing orders, sending notifications, and much more. This allows businesses to save time and improve customer service.</p>
+            <p>Our WhatsApp bots are customizable to fit your business needs, ensuring that you provide the best possible experience for your customers. Whether you're running a small business or a large enterprise, WhatsApp bots can help you scale your operations efficiently.</p>
+            <p>Click the button below to explore our product offerings related to WhatsApp bots.</p>
+            <a href="products.html" class="next-btn">Next</a>
+        </div>
+    </section>
+
+    <script>
+        // Menghilangkan animasi loader setelah halaman dimuat
+        window.addEventListener("load", function() {
+            document.getElementById("loader").style.display = "none";
+            document.body.style.overflow = "auto";
+            document.body.style.opacity = "1";
+        });
+
+        // Event listener untuk tombol "Next" yang memuat halaman produk dengan animasi transisi
+        document.querySelector(".next-btn").addEventListener("click", function(e) {
+            e.preventDefault();
+            document.body.style.opacity = "0";
+            setTimeout(function() {
+                window.location.href = "products.html";
+            }, 1000); // Waktu animasi transisi (1 detik)
+        });
+    </script>
+</body>
+</html>

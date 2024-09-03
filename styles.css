@@ -1,0 +1,101 @@
+body {
+    background-color: #000; /* Latar belakang hitam */
+    color: #00ffff; /* Warna teks biru cyber */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #111; /* Warna latar belakang nav sedikit lebih terang */
+    padding: 15px;
+    box-shadow: 0 0 10px #00ffff; /* Efek bayangan pada nav */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #111; /* Warna latar belakang header */
+    box-shadow: 0 0 20px #00ffff; /* Efek bayangan pada header */
+}
+
+header h1 {
+    font-size: 48px; /* Ukuran besar */
+    font-weight: bold; /* Teks tebal */
+    color: #00ffff;
+    text-shadow: 2px 2px 4px #000000; /* Efek shadow pada teks */
+}
+
+header p {
+    font-size: 24px; /* Ukuran teks di paragraf */
+    margin-top: 20px;
+}
+
+.introduction {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.introduction p {
+    font-size: 22px;
+    color: #ffffff; /* Warna teks putih */
+}
+
+.next-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 24px; /* Ukuran teks di tombol */
+    font-weight: bold; /* Teks tebal */
+    color: #00ffff; /* Warna teks biru cyber */
+    background-color: #222; /* Warna latar belakang tombol */
+    border: 3px solid #00ffff; /* Border biru cyber */
+    border-radius: 10px; /* Sudut tombol membulat */
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #000000; /* Efek shadow pada teks tombol */
+    box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff inset; /* Shadow luar dan dalam */
+    transition: all 0.3s ease; /* Efek transisi */
+}
+
+.next-btn:hover {
+    background-color: #00ffff;
+    color: #000;
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff inset;
+}
+
+.about {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #111;
+    box-shadow: 0 0 20px #00ffff; /* Efek bayangan pada section */
+}
+
+.about h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00ffff;
+}
+
+.about p {
+    font-size: 20px;
+    color: #ffffff;
+}
